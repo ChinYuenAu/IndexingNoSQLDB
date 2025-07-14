@@ -42,7 +42,7 @@ https://stackoverflow.com/questions/50800605/using-binary-search-in-b-tree#:~:te
 
 | File System Design                            | 
 |---------------------------------------------- |
-|<img src="assets/SystemDesignIllustration.png" width="1000"> |
+|<img src="assets/SystemDesignIllustration.png" width="800"> |
 |<img src="assets/FileSystemScreenshot.png" width="1000"> |
 
 
