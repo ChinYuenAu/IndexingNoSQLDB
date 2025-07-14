@@ -2,7 +2,7 @@
 
 ## How to run?
 
-1. `git clone https://github.com/amandaay/IndexingNoSQLDB.git`
+1. `git clone https://github.com/ChinYuenAu/IndexingNoSQLDB.git`
 2. To compile, `clang++ -std=c++17 BTree.cpp BTreeTest.cpp -o <name-you-want-to-give>` or `g++ -std=c++17 BTree.cpp BTreeTest.cpp -o <name-you-want-to-give>`
 3. `./<name-you-want-to-give> <testFile.txt> <NODESIZE>`, e.g. `<name-you-want-to-give>` = `BTreeTest`
 
@@ -10,10 +10,6 @@
 
 1. In this program, user will have to feed in a textfile similar to `DemoTestFile.txt` to implement a BTree. i.e. The textfile must be a set of integers separated by commas.
 2. After building the BTree, the user can input values to be searched.
-
-## Known bugs
-
-No known bugs so far.
 
 ## Limitations
 
@@ -42,6 +38,13 @@ https://stackoverflow.com/questions/50800605/using-binary-search-in-b-tree#:~:te
 1. To compile, `g++ -std=c++17 NoSQLDatabase.o BTree.cpp main.o -o NoSQLDb` or `clang++ -std=c++17 NoSQLDatabase.cpp BTree.cpp main.cpp -o NoSQLDb`
 2. To run the program, `./NoSQLDb`.
 3. Prompt `NoSQL > ` will be shown to enter desired commands.
+
+
+| File System Design                            | 
+|---------------------------------------------- |
+|<img src="assets/SystemDesignIllustration.png" width="200"> |
+|<img src="assets/FileSystemScreenshot.png" width="200"> |
+
 
 ## Assumptions
 
