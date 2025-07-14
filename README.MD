@@ -92,7 +92,7 @@ Bit Map:
 - Number of block accessed: Read fcbs + (every index block from the root) + Data Block
 
 ## Presentation Slide
-https://docs.google.com/presentation/d/11No_ByUtp9IdFpWdFastP0NVLu4G1fSZGQK9316PIJQ/edit?usp=sharing
+https://docs.google.com/presentation/d/1YOB6OdCiuPe38q6W0x7_Q6gEBVhb72_tIi2zJT5Pz9Y/edit?usp=share_link
 
 ## Authors
 
