@@ -48,10 +48,9 @@ https://stackoverflow.com/questions/50800605/using-binary-search-in-b-tree#:~:te
 
 ## Assumptions
 
-1. Test file should always have:
-
-  - Header
-  - Endline ("\n") at the end of each line or record
+- Test file should always have:
+  -- Header
+  -- Endline ("\n") at the end of each line or record
   - First character or integer before the first comma (",") is our key
 
 2. Each data record has a maximum of 40 bytes, bfr = 256/40 = 6 records
