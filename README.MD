@@ -50,26 +50,26 @@ https://stackoverflow.com/questions/50800605/using-binary-search-in-b-tree#:~:te
 
 1. Test file should always have:
 
--- Header
--- Endline ("\n") at the end of each line or record
--- First character or integer before the first comma (",") is our key
+  - Header
+  - Endline ("\n") at the end of each line or record
+  - First character or integer before the first comma (",") is our key
 
 2. Each data record has a maximum of 40 bytes, bfr = 256/40 = 6 records
 
 3. Each block has a maximum of 256 bytes
 
 4. Index block allocation assumption:
--- child block # 5 bytes
--- key, block # (8 bytes, 5 bytes)
--- index blocking factor (bfri) for index block: (256 - 5) / (8 + 5 + 5) = 13 key
+  - child block # 5 bytes
+  - key, block # (8 bytes, 5 bytes)
+  - index blocking factor (bfri) for index block: (256 - 5) / (8 + 5 + 5) = 13 key
 
 5. Directory Structure Assumptions:
 
--- Database name: 50 bytes
--- Total size: 10 bytes
--- Number of total files (PFS): 2 bytes
--- Block size: 3 bytes
--- Number of uploaded files: 1 byte
+  - Database name: 50 bytes
+  - Total size: 10 bytes
+  - Number of total files (PFS): 2 bytes
+  - Block size: 3 bytes
+  - Number of uploaded files: 1 byte
 
 Assume that there are 3 FCBs:
 - filename: 50 bytes
