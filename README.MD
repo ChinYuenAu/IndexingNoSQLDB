@@ -49,49 +49,48 @@ https://stackoverflow.com/questions/50800605/using-binary-search-in-b-tree#:~:te
 ## Assumptions
 
 - Test file should always have:
-  -- Header
-  -- Endline ("\n") at the end of each line or record
+  - Header
+  - Endline ("\n") at the end of each line or record
   - First character or integer before the first comma (",") is our key
 
-2. Each data record has a maximum of 40 bytes, bfr = 256/40 = 6 records
+- Each data record has a maximum of 40 bytes, bfr = 256/40 = 6 records
 
-3. Each block has a maximum of 256 bytes
+- Each block has a maximum of 256 bytes
 
-4. Index block allocation assumption:
+- Index block allocation assumption:
   - child block # 5 bytes
   - key, block # (8 bytes, 5 bytes)
   - index blocking factor (bfri) for index block: (256 - 5) / (8 + 5 + 5) = 13 key
 
-5. Directory Structure Assumptions:
-
+- Directory Structure Assumptions:
   - Database name: 50 bytes
   - Total size: 10 bytes
   - Number of total files (PFS): 2 bytes
   - Block size: 3 bytes
   - Number of uploaded files: 1 byte
 
-Assume that there are 3 FCBs:
-- filename: 50 bytes
-- filesize: 10 bytes
-- date/time: 20 bytes
-- start block: 5 bytes
-- Number of blocks used: 5 bytes
-- Starting block for index (i.e. root): 5 bytes
+- Assume that there are 3 FCBs:
+  - filename: 50 bytes
+  - filesize: 10 bytes
+  - date/time: 20 bytes
+  - start block: 5 bytes
+  - Number of blocks used: 5 bytes
+  - Starting block for index (i.e. root): 5 bytes
 
-Bit Map:
-- Number of blocks = 1 Mbytes / block size = 1024 * 1024 / 256 = 4096 blocks
-- Each block has 1 or 0. (bit)
-- 0 indicates a free block, 1 indicates that the block is allocated.
-- Total blocks in a PFS / BLOCK_SIZE = 4096 / 256 = 16 blocks
-- Thus, we will use 16 blocks to represent.
+- Bit Map:
+  - Number of blocks = 1 Mbytes / block size = 1024 * 1024 / 256 = 4096 blocks
+  - Each block has 1 or 0. (bit)
+  - 0 indicates a free block, 1 indicates that the block is allocated.
+  - Total blocks in a PFS / BLOCK_SIZE = 4096 / 256 = 16 blocks
+  - Thus, we will use 16 blocks to represent.
 
-- Assume that metadata uses 1 block, each FCB uses 1 block (3 * 1 block), bitmap uses 16 blocks
-- The directory structure takes around 20 blocks.
+  - Assume that metadata uses 1 block, each FCB uses 1 block (3 * 1 block), bitmap uses 16 blocks
+  - The directory structure takes around 20 blocks.
 
-6. Every PFS File has a directory structure.
+- Every PFS File has a directory structure.
 
-7. For find command:
-- Number of block accessed: Read fcbs + (every index block from the root) + Data Block
+- For find command:
+  - Number of block accessed: Read fcbs + (every index block from the root) + Data Block
 
 ## Presentation Slide
 https://docs.google.com/presentation/d/1YOB6OdCiuPe38q6W0x7_Q6gEBVhb72_tIi2zJT5Pz9Y/edit?usp=share_link
